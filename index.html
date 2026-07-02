@@ -1,43 +1,227 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiera Yasa Portfolio</title> <link rel="stylesheet" href="style.css">
+    <title>Kiera Yasa Portfolio</title> 
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!--NAVIGATION & SIDEBAR-->
     <nav>
-        <ul class = "sidebar">
-            <li onclick=hidesidebar()><a href = "#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-            <li><a href = "#home" class ="nav-sections">Home</a></li>
-            <li><a href = "#projects" class ="nav-sections">Projects</a></li>
-            <li><a href = "#awards" class ="nav-sections">Awards</a></li>
-            <li><a href = "#" class ="nav-sections">Extra Curriculars</a></li>
-            <li><a href = "#" class ="nav-sections">Contact Me</a></li>
+        <ul class="sidebar">
+            <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li><a href="#home" class="nav-sections" onclick="hidesidebar()">Home</a></li>
+            <li><a href="#projects" class="nav-sections" onclick="hidesidebar()">Projects</a></li>
+            <li><a href="#awards" class="nav-sections" onclick="hidesidebar()">Awards</a></li>
+            <li><a href="#extracurriculars" class="nav-sections" onclick="hidesidebar()">Extra Curriculars</a></li>
+            <li><a href="#contact" class="nav-sections" onclick="hidesidebar()">Contact Me</a></li>
         </ul>
         <ul>
-            <li><a href = "#" class ="logo">Kiera Yasa</a></li>
-            <li class = "hideonmobile"><a href = "#home" class ="nav-sections">Home</a></li>
-            <li class = "hideonmobile"><a href = "#projects" class ="nav-sections">Projects</a></li>
-            <li class = "hideonmobile"><a href = "#awards" class ="nav-sections">Awards</a></li>
-            <li class = "hideonmobile"><a href = "#" class ="nav-sections">Extra Curriculars</a></li>
-            <li class = "hideonmobile"><a href = "#" class ="nav-sections">Contact Me</a></li>
-            <li onclick=showsidebar()><a href = "#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            <li><a href="#" class="logo">Kiera Yasa</a></li>
+            <li class="hideonmobile"><a href="#home" class="nav-sections">Home</a></li>
+            <li class="hideonmobile"><a href="#projects" class="nav-sections">Projects</a></li>
+            <li class="hideonmobile"><a href="#awards" class="nav-sections">Awards</a></li>
+            <li class="hideonmobile"><a href="#extracurriculars" class="nav-sections">Extra Curriculars</a></li>
+            <li class="hideonmobile"><a href="#contact" class="nav-sections">Contact Me</a></li>
+            <li onclick="showsidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
         </ul>
     </nav>
 
-    
-    <section id= "home" class = "home">
-        <div class = "home-img">
-            <img src="images/home-img.jpeg" alt="">
+    <!--HOME SECTION-->
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="images/home-img.jpeg" alt="Kiera Yasa Profile Picture">
         </div>
-        <div class = "home-content">
+        <div class="home-content">
             <h1>Kiera Yasa</h1>
             <h3>Hello! I'm Kiera Yasa, a motivated high school student with a strong interest in biomedical engineering. I enjoy solving real-world problems through science and technology and am eager to gain hands-on experience while developing new skills. Outside of academics, I am also a national figure skating athlete representing Indonesia in national and international competitions. This portfolio showcases my projects, achievements and extracurricular activities.</h3>
         </div>
     </section>
 
+<!--PROJECTS SECTION-->
+<section id="projects" class="portfolio-section alternate-bg">
+    <h2 class="section-title">Featured Project</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <div class="card-img-wrapper">
+                <div class="slider-container">
+                    <img src="images/project-coco1.png" class="slide active">
+                    <img src="images/project-coco2.jpeg" class="slide" >
+                    <img src="images/project-coco3.jpeg" class="slide" >
+                    
+                    <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                    <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>COCO₂ Exhaust Filter</h3>
+                <p>An innovative, snap-on mechanical motorcycle filter utilizing coconut biochar to capture hazardous emissions, paired with an integrated hardware monitoring interface engineered to read physical metrics via self-sustaining power hardware.</p>
+                <a href="project-coco.html" class="learn-more-btn">
+                    Find Out More 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--AWARDS SECTION (Clean Text Cards)-->
+    <section id="awards" class="portfolio-section">
+        <h2 class="section-title">Awards & Achievements</h2>
+        <div class="grid-container">
+            
+            <!-- Award Card 1 -->
+            <div class="project-card award-card">
+                <div class="card-info">
+                    <h3>The Conrad Challenge</h3>
+                    <div class="award-list">
+                        <p>2026 - Conrad Innovator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award Card 2 -->
+            <div class="project-card award-card">
+                <div class="card-info">
+                    <h3>Singapore and Asian Schools Math Olympiad (SASMO)</h3>
+                    <div class="award-list">
+                        <p>2025 - Bronze Award</p>
+                        <p>2023 - Bronze Award</p>
+                        <p>2022 - Bronze Award</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award Card 3 -->
+            <div class="project-card award-card">
+                <div class="card-info">
+                    <h3>Vanda International Junior Science Olympiad (VNJSO)</h3>
+                    <div class="award-list">
+                        <p>2025 - Gold Award</p>
+                        <p>2024 - Bronze Award</p>
+                    </div>
+                </div>    
+            </div>
+
+            <!-- Award Card 4 -->
+            <div class="project-card award-card">
+                <div class="card-info">
+                    <h3>International Chemisry Quiz (ICQ)</h3>
+                    <div class="award-list">
+                        <p>2024 - Distinction Award</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Award Card 5 -->
+            <div class="project-card award-card">
+                <div class="card-info">
+                    <h3>Singapore Math Challenge (SMC)</h3>
+                    <div class="award-list">
+                        <p>2025 - Outstanding Award</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXTRA CURRICULARS SECTION-->
+    <section id="extracurriculars" class="portfolio-section alternate-bg">
+        <h2 class="section-title">Extra Curriculars</h2>
+        <div class="grid-container">
+            
+            <!--Card 1: Internship-->
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="images/intern1.jpg" class="slide active" >
+                        <img src="images/intern2.jpg" class="slide" >
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Internship at PT Murti Indah Sentosa</h3>
+                    <p>Completed a two-week internship at PT Murti Indah Sentosa, gaining hands-on exposure to medical imaging and healthcare technologies. Developed an understanding of diagnostic imaging systems, critical care equipment, medical rehabilitation technologies, digital radiography workflows, and the integration of PACS/RIS, while learning how engineering supports safe and effective patient care.</p>
+                    <a href="ec-internship.html" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!--Card 2: Summer School-->
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="images/NUS1.jpg" class="slide active" >
+                        <img src="images/NUS2.JPG" class="slide" >
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Summer Program at NUS</h3>
+                    <p>Completed a six-day intensive AI program, gaining foundational knowledge of artificial intelligence and its real-world applications. Collaborated in team-based challenges and developed a project proposal that applied AI to address healthcare challenges, strengthening problem-solving, teamwork, and presentation skills.</p>
+                    <a href="ec-summerschool.html" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!--Card 3: Figure Skating-->
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="images/figureskating1.jpg" class="slide active">
+                        <img src="images/figureskating2.jpg" class="slide" >
+                        <img src="images/figureskating3.JPG" class="slide" >
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>National Figure Skating</h3>
+                    <p>Represented Indonesia in national and international figure skating competitions. Developed strong adaptability, time management, and the ability to perform under pressure while competing on national and international stages.</p>
+                    <a href="ec-skating.html" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </section>
+
+   <!--CONTACT ME SECTION-->
+<section id="contact" class="portfolio-section">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-form-container">
+        
+        <form class="contact-form" action="https://formspree.io/f/mrewywyr" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="What would you like to discuss?" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-form-btn">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+    <!-- Navigation Script -->
     <script>
         function showsidebar(){
             const sidebar = document.querySelector('.sidebar')
@@ -48,5 +232,41 @@
             sidebar.style.display = "none"
         }
     </script>
+    
+    <script>
+        function showsidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = "flex"
+        }
+        function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = "none"
+        }
 
+        // The Slider Engine Function
+        function changeSlide(button, direction) {
+            const container = button.parentElement;
+            const slides = container.querySelectorAll('.slide');
+            
+            let activeIndex = 0;
+            slides.forEach((slide, index) => {
+                if (slide.classList.contains('active')) {
+                    activeIndex = index;
+                }
+            });
+
+            slides[activeIndex].classList.remove('active');
+
+            let nextIndex = activeIndex + direction;
+            if (nextIndex >= slides.length) {
+                nextIndex = 0;
+            } else if (nextIndex < 0) {
+                nextIndex = slides.length - 1;
+            }
+
+            slides[nextIndex].classList.add('active');
+        }
+    </script>
 </body>
+</body>
+</html>
